@@ -14,6 +14,7 @@ const VisionOriginSection = () => {
     const creditsRollRef = useRef(null);
 
     useGSAP(() => {
+        const isMobile = window.innerWidth < 1024;
         const maskHeight = maskRef.current.offsetHeight;
         gsap.set('.roll-block', { height: maskHeight });
 
@@ -21,15 +22,15 @@ const VisionOriginSection = () => {
             scrollTrigger: {
                 trigger: triggerRef.current,
                 start: "top top",
-                end: "+=4000",
-                pin: true,
+                end: isMobile ? "+=2000" : "+=4000",
+                pin: !isMobile,
                 scrub: 1,
             }
         });
-        gsap.set(headerRef.current, { y: "25vh" });
+        gsap.set(headerRef.current, { y: isMobile ? 0 : "25vh" });
         gsap.set(lineRef.current, { scaleX: 0 });
         tl.to(headerRef.current, { y: 0, duration: 1.5, ease: "power2.inOut" }, 0)
-            .to(lineRef.current, { scaleX: 1, duration: 1.5, ease: "power2.inOut" }, 0)
+            .to(lineRef.current, { scaleX: 1, duration: 1.5, ease: "power2.inOut" }, 0);
         tl.to(creditsRollRef.current, {
             y: () => -(creditsRollRef.current.offsetHeight - maskHeight),
             duration: 7,
@@ -40,7 +41,7 @@ const VisionOriginSection = () => {
 
     return (
         <div ref={containerRef} className="relative w-full min-h-screen text-white">
-            <section ref={triggerRef} className="relative h-screen w-full flex flex-col px-4 md:px-8 pt-12 pb-8">
+            <section ref={triggerRef} className="relative h-screen w-full flex flex-col px-4 md:px-8 pt-6 md:pt-12 pb-8">
                 {/* svgsssssssssssssss don't change broo, this gonaaa spoill everyyythingggg */}
                 <div className='absolute h-full w-full bottom-full left-0 -z-10'>
                     <svg width="full" height="1500" className="min-h-[190vh]" viewBox="0 0 1280 1607" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +109,7 @@ const VisionOriginSection = () => {
                             </div>
                             <h3 className="font-serif text-3xl md:text-4xl text-white mb-6">Trust is the Foundation</h3>
                             <p className="font-sans text-white text-sm md:text-lg leading-relaxed max-w-2xl">
-                                Through years of research and global consulting, one insight became clear: trust isn’t a soft skill—it’s the absolute currency of leadership effectiveness.
+                                Through years of research and global consulting, one insight became clear: trust isn't a soft skill—it's the absolute currency of leadership effectiveness.
                             </p>
                         </div>
                         <div className="roll-block shrink-0" />

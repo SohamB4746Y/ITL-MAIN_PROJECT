@@ -118,12 +118,12 @@ const JourneySection = () => {
             </div>
             <div
                 ref={scrollRef}
-                className="w-full flex-1 overflow-x-auto hide-scrollbar cursor-grab pl-16 md:pl-32 pr-24 relative"
+                className="w-full flex-1 overflow-x-auto hide-scrollbar cursor-grab pl-8 md:pl-32 pr-8 md:pr-24 relative"
                 onMouseDown={handleMouseDown}
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
                 onMouseMove={handleMouseMove}
-                style={{ scrollBehavior: 'smooth' }}
+                style={{ scrollBehavior: 'smooth', touchAction: 'pan-x' }}
             >
                 <div className="flex w-max min-h-[600px] h-full pt-12 relative">
 
