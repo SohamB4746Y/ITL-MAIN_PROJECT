@@ -35,12 +35,13 @@ const InfoSlider = () => {
     ];
 
     useGSAP(() => {
+        const isMobile = window.innerWidth < 1024;
         const totalSlides = slides.length;
         ScrollTrigger.create({
             trigger: containerRef.current,
             start: "top top",
-            end: "+=3000",
-            pin: true,
+            end: isMobile ? "+=1500" : "+=3000",
+            pin: !isMobile,
             scrub: 1,
             onUpdate: (self) => {
                 const progress = self.progress;
@@ -84,7 +85,7 @@ const InfoSlider = () => {
             </div>
             <div className="relative z-10 w-full h-full flex flex-col pt-4 px-4 md:px-0">
                 <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 grid-rows-2 w-full border-b border-[#FFFFFF14]">
-                    <div className={`border-b border-r border-[#FFFFFF14] p-8 md:p-12 flex flex-col justify-center relative transition-all duration-200 ${activeSlide === 1 ? "bg-[#FFFFFF0F]" : "bg-transparent"}`}>
+                    <div className={`border-b border-r border-[#FFFFFF14] p-6 md:p-12 flex flex-col justify-center relative transition-all duration-200 ${activeSlide === 1 ? "bg-[#FFFFFF0F]" : "bg-transparent"}`}>
                         <div className="animate-fadeInKey" key={`tl-${activeSlide}`}>
                             <div className="flex items-center gap-2 mb-6">
                                 <span className="w-2 h-2 bg-white inline-block"></span>
@@ -96,7 +97,7 @@ const InfoSlider = () => {
                     <div className={`border-b border-[#FFFFFF14] flex flex-col justify-center relative overflow-hidden transition-all duration-200 ${activeSlide === 0 || activeSlide === 2 ? "bg-[#FFFFFF0F]" : "bg-transparent"}`}>
                         <div className="w-full h-full animate-fadeInKey flex flex-col justify-center" key={`tr-${activeSlide}`}>
                             {slides[activeSlide].tr.type === 'image' && (
-                                <img src={slides[activeSlide].tr.src} alt={slides[activeSlide].tr.alt} className="w-full h-full object-contain" />
+                                <img src={slides[activeSlide].tr.src} alt={slides[activeSlide].tr.alt} className="w-full h-full object-contain max-h-48 lg:max-h-full" />
                             )}
                             {slides[activeSlide].tr.type === 'stat' && (
                                 <div className="text-center p-4">
@@ -107,10 +108,10 @@ const InfoSlider = () => {
                             )}
                         </div>
                     </div>
-                    <div className={`border-r border-[#FFFFFF14] p-8 md:p-12 flex flex-col justify-center relative transition-all duration-200 ${activeSlide === 0 || activeSlide === 2 ? "bg-[#FFFFFF0F]" : "bg-transparent"}`}>
+                    <div className={`border-r border-[#FFFFFF14] p-6 md:p-12 flex flex-col justify-center relative transition-all duration-200 ${activeSlide === 0 || activeSlide === 2 ? "bg-[#FFFFFF0F]" : "bg-transparent"}`}>
                         <div className="w-full h-full animate-fadeInKey flex flex-col justify-center" key={`bl-${activeSlide}`}>
                             {slides[activeSlide].bl.isText && (
-                                <p className="font-sans font-light text-lg text-white leading-relaxed whitespace-pre-line overflow-y-auto max-h-full">
+                                <p className="font-sans font-light text-base md:text-lg text-white leading-relaxed whitespace-pre-line overflow-y-auto max-h-full">
                                     {slides[activeSlide].bl.text}
                                 </p>
                             )}
@@ -123,10 +124,10 @@ const InfoSlider = () => {
                             )}
                         </div>
                     </div>
-                    <div className={`p-8 md:p-12 flex flex-col justify-center relative transition-all duration-200 ${activeSlide === 1 ? "bg-[#FFFFFF0F]" : "bg-transparent"}`}>
+                    <div className={`p-6 md:p-12 flex flex-col justify-center relative transition-all duration-200 ${activeSlide === 1 ? "bg-[#FFFFFF0F]" : "bg-transparent"}`}>
                         <div className="w-full h-full animate-fadeInKey flex flex-col justify-start" key={`br-${activeSlide}`}>
                             {slides[activeSlide].br.isText && (
-                                <p className="font-sans font-light text-lg text-white leading-relaxed whitespace-pre-line overflow-y-auto max-h-full">
+                                <p className="font-sans font-light text-base md:text-lg text-white leading-relaxed whitespace-pre-line overflow-y-auto max-h-full">
                                     {slides[activeSlide].br.text}
                                 </p>
                             )}
@@ -141,7 +142,14 @@ const InfoSlider = () => {
                         </div>
                     </div>
                 </div>
-                <div className="shrink-0 w-full h-16 flex items-center justify-center gap-4 text-2xl font-sans text-[#FFFFFF4D] mt-auto py-4">
+                {/* Mobile slide indicator — show on small screens */}
+                <div className="flex md:hidden items-center justify-center gap-3 py-4">
+                    {slides.map((_, i) => (
+                        <span key={i} className={`w-2 h-2 rounded-full transition-all duration-300 ${activeSlide === i ? 'bg-white scale-125' : 'bg-white/30'}`} />
+                    ))}
+                </div>
+                {/* Desktop progress bar — hide on small screens */}
+                <div className="shrink-0 w-full h-16 hidden md:flex items-center justify-center gap-4 text-2xl font-sans text-[#FFFFFF4D] mt-auto py-4">
                     <span className={`transition-colors duration-300 ${activeSlide >= 0 ? "text-white font-bold" : ""}`}>01</span>
                     <div className="relative w-[200px] h-[10px]">
                         <svg width="200" height="10" className="absolute top-0 left-0 opacity-80 z-0">

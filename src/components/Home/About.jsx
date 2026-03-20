@@ -37,13 +37,14 @@ const AboutSection = ({ bgRef }) => {
     ];
 
     useGSAP(() => {
+        const isMobile = window.innerWidth < 1024;
         const sections = content.length;
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
-                end: "+=2000",
-                pin: true,
+                end: isMobile ? "+=800" : "+=2000",
+                pin: !isMobile,
                 scrub: 1,
                 onUpdate: (self) => {
                     const progress = self.progress;
@@ -59,35 +60,37 @@ const AboutSection = ({ bgRef }) => {
             ScrollTrigger.create({
                 trigger: containerRef.current,
                 start: "top top",
-                end: "+=2000",
-                pin: bgRef.current,
+                end: isMobile ? "+=800" : "+=2000",
+                pin: isMobile ? false : bgRef.current,
                 pinSpacing: false,
                 scrub: true
             });
         }
 
-        tl.to(circleRef.current, {
-            rotation: -240,
-            ease: "none",
-            duration: 1
-        });
+        if (!isMobile) {
+            tl.to(circleRef.current, {
+                rotation: -240,
+                ease: "none",
+                duration: 1
+            });
 
-        tl.to(".orbit-icon-wrapper", {
-            rotation: "+=240",
-            ease: "none",
-            duration: 1
-        }, "<");
+            tl.to(".orbit-icon-wrapper", {
+                rotation: "+=240",
+                ease: "none",
+                duration: 1
+            }, "<");
 
-        tl.to(centerIconRef.current, {
-            rotation: -240,
-            ease: "none",
-            duration: 1
-        }, "<");
+            tl.to(centerIconRef.current, {
+                rotation: -240,
+                ease: "none",
+                duration: 1
+            }, "<");
+        }
 
     }, { scope: containerRef, dependencies: [bgRef] })
 
     return (
-        <section ref={containerRef} className="relative w-full h-screen flex flex-col items-center justify-center bg-transparent">
+        <section ref={containerRef} className="relative w-full h-screen flex flex-col items-center justify-center bg-transparent overflow-x-hidden">
             {/* svgsssssssssssssss don't change broo, this gonaaa spoill everyyythingggg */}
             <div className='absolute h-full w-full bottom-full left-0 z-[-1]'>
                 <svg width="full" height="1500" className="min-h-[190vh]" viewBox="0 0 1280 1607" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +116,7 @@ const AboutSection = ({ bgRef }) => {
             </div>
             <div className="w-full max-w-7xl px-6 md:px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                 <div className="relative w-full aspect-square max-w-[500px] mx-auto flex items-center justify-center">
-                    <div ref={circleRef} className="relative w-[300px] md:w-[400px] h-[300px] md:h-[400px] rounded-full flex items-center justify-center">
+                    <div ref={circleRef} className="relative w-[260px] sm:w-[300px] md:w-[400px] h-[260px] sm:h-[300px] md:h-[400px] rounded-full flex items-center justify-center">
                         <svg className="absolute inset-0 w-full h-full rotate-90" viewBox="0 0 100 100">
                             <circle
                                 cx="50"
@@ -140,7 +143,7 @@ const AboutSection = ({ bgRef }) => {
                                         style={{ transform: `rotate(${-rotation}deg)` }}
                                     >
                                         <button
-                                            className={`w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 z-10 
+                                            className={`w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 z-10 
                                                 ${activeTab === index
                                                     ? 'bg-[#0080FFA3] border border-[#0080FFA3] text-white'
                                                     : 'bg-[#FFFFFF3D] text-white'
