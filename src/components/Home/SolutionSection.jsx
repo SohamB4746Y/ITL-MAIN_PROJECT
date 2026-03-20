@@ -36,6 +36,27 @@ const SolutionSection = () => {
     ];
 
     useGSAP(() => {
+        const isMobile = window.innerWidth < 1024;
+
+        if (isMobile) {
+            // On mobile: just fade cards in on scroll, no pin, no fly-in
+            gsap.fromTo([card1Ref.current, card2Ref.current, card3Ref.current],
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top 75%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+            gsap.set(cardsWrapperRef.current, { autoAlpha: 1 });
+            gsap.set(headerRef.current, { opacity: 0, display: 'none' });
+            return;
+        }
+
+        // Desktop: existing animation unchanged
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
@@ -72,7 +93,7 @@ const SolutionSection = () => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className="relative w-full h-screen overflow-hidden flex flex-col justify-center text-white">
+        <section ref={containerRef} className="relative w-full lg:h-screen overflow-hidden flex flex-col justify-center text-white">
             <div className="absolute w-[30%] h-full top-0 right-0 bg-gradient-to-l from-[#0A0A0A] to-transparent z-50 pointer-events-none"></div>
             <div
                 ref={headerRef}
@@ -92,11 +113,11 @@ const SolutionSection = () => {
             </div>
             <div
                 ref={cardsWrapperRef}
-                className="relative w-full max-w-7xl mx-auto h-[65vh] z-10 grid grid-cols-3 gap-4 opacity-0 invisible"
+                className="relative w-full max-w-7xl mx-auto lg:h-[65vh] z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-4 px-4 lg:px-0 py-12 lg:py-0 opacity-0 invisible"
             >
                 <div
                     ref={baseLineRef}
-                    className="absolute bottom-0 left-0 w-full h-[12px] origin-center z-0 flex flex-col justify-between"
+                    className="absolute bottom-0 left-0 w-full h-[12px] origin-center z-0 hidden lg:flex flex-col justify-between"
                 >
                     <div className="w-full h-full border-t-[3px] border-b-[3px] border-dashed border-white"
                         style={{
@@ -106,35 +127,35 @@ const SolutionSection = () => {
                     />
                 </div>
 
-                <div ref={card1Ref} className="flex flex-col items-center justify-end h-full relative z-10">
+                <div ref={card1Ref} className="flex flex-col items-start lg:items-center justify-end h-auto lg:h-full relative z-10">
                     <div className="relative flex flex-col items-start text-start max-w-3xs mb-4">
-                        <div className="absolute -top-1/2 -left-1/4 font-serif text-9xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent from-50% to-100% ">
+                        <div className="hidden lg:block absolute -top-1/2 -left-1/4 font-serif text-9xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent from-50% to-100% ">
                             {cards[0].number}
                         </div>
                         <h3 className="text-3xl font-serif text-white mb-2 tracking-wide">{cards[0].title}</h3>
                         <p className="text-[#FFFFFF52] font-sans text-base">{cards[0].desc}</p>
                     </div>
-                    <div className="w-1 h-32 bg-gradient-to-b from-transparent to-white" />
+                    <div className="w-1 h-32 bg-gradient-to-b from-transparent to-white hidden lg:block" />
                 </div>
-                <div ref={card2Ref} className="flex flex-col items-center justify-start text-start h-full relative z-10">
-                    <div className="relative flex flex-col items-start text-start max-w-3xs mt-10 mb-6">
-                        <div className="absolute -top-1/2 -left-1/4 font-serif text-9xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent from-50% to-100% ">
+                <div ref={card2Ref} className="flex flex-col items-start lg:items-center justify-start text-start h-auto lg:h-full relative z-10">
+                    <div className="relative flex flex-col items-start text-start max-w-3xs mt-0 lg:mt-10 mb-6">
+                        <div className="hidden lg:block absolute -top-1/2 -left-1/4 font-serif text-9xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent from-50% to-100% ">
                             {cards[1].number}
                         </div>
                         <h3 className="text-3xl font-serif text-white mb-2 tracking-wide">{cards[1].title}</h3>
                         <p className="text-[#FFFFFF52] font-sans text-base">{cards[1].desc}</p>
                     </div>
-                    <div className="w-1 h-42 flex-1 bg-gradient-to-b from-transparent to-white" />
+                    <div className="w-1 h-42 flex-1 bg-gradient-to-b from-transparent to-white hidden lg:block" />
                 </div>
-                <div ref={card3Ref} className="flex flex-col items-center justify-end h-full relative z-10">
+                <div ref={card3Ref} className="flex flex-col items-start lg:items-center justify-end h-auto lg:h-full relative z-10">
                     <div className="relative flex flex-col items-start text-start max-w-3xs mb-4">
-                        <div className="absolute -top-1/2 -left-1/4 font-serif text-9xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent from-50% to-100% ">
+                        <div className="hidden lg:block absolute -top-1/2 -left-1/4 font-serif text-9xl leading-none text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent from-50% to-100% ">
                             {cards[2].number}
                         </div>
                         <h3 className="text-3xl font-serif text-white mb-2 tracking-wide">{cards[2].title}</h3>
                         <p className="text-[#FFFFFF52] font-sans text-base">{cards[2].desc}</p>
                     </div>
-                    <div className="w-1 h-32 bg-gradient-to-b from-transparent to-white" />
+                    <div className="w-1 h-32 bg-gradient-to-b from-transparent to-white hidden lg:block" />
                 </div>
 
             </div>
