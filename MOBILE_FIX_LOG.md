@@ -1,0 +1,1 @@
+- [x] docs: start mobile responsiveness log
