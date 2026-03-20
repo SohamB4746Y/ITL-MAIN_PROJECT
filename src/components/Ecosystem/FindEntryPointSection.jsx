@@ -143,7 +143,7 @@ const FindEntryPointSection = () => {
                             WHERE DO YOU FIT
                         </span>
                     </div>
-                    <h2 className="entry-header font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] max-w-3xl mx-auto">
+                    <h2 className="entry-header font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight max-w-3xl mx-auto">
                         Find Your Entry Point into the ITL Ecosystem
                     </h2>
                 </div>

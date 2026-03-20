@@ -38,13 +38,13 @@ const Hero = () => {
                             Four Pathways to Impact.
                         </h1>
                     </div>
-                    <div className="flex flex-col justify-end pb-32">
-                        <p className="font-sans text-base leading-relaxed text-white max-w-md text-right ml-auto">
+                    <div className="flex flex-col justify-start lg:justify-end pb-8 lg:pb-32">
+                        <p className="font-sans text-base leading-relaxed text-white max-w-md text-left lg:text-right ml-auto">
                             The Institute of Trusted Leadership operates through an integrated ecosystem of specialized divisions, each addressing different aspects of leadership development and organizational transformation.
                         </p>
                     </div>
                 </div>
-                <div className="absolute bottom-10 left-0 w-full border-t-[0.5px] border-[#FFFFFF3D] pt-5 flex justify-between items-center text-white font-serif text-sm">
+                <div className="absolute bottom-6 md:bottom-10 left-0 w-full border-t-[0.5px] border-[#FFFFFF3D] pt-5 flex justify-between items-center text-white font-serif text-sm">
                     <span className="tracking-wide">Scroll to Discover</span>
                     <span>
                         <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">

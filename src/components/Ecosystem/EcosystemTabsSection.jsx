@@ -80,7 +80,7 @@ const EcosystemTabsSection = ({ activeTab }) => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className="relative w-full py-20 px-4 md:px-8 bg-[#0080FF08]">
+        <section ref={containerRef} className="relative w-full py-20 px-4 md:px-8 bg-[#0080FF08] overflow-hidden">
             <div className="tabs-content-wrapper w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fadeIn" key={activeTab}>
                 {/* Left: content */}
                 <div className="flex flex-col items-start text-left">

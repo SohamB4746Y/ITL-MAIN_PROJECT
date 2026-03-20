@@ -81,7 +81,7 @@ const EcosystemOrbitSection = ({ activeTab, setActiveTab }) => {
             </div>
 
             {/* Orbital Diagram */}
-            <div className="relative w-full max-w-2xl aspect-square mx-auto mb-16">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-2xl aspect-square mx-auto mb-16">
                 {/* SVG orbit ring */}
                 <svg
                     className="absolute inset-0 w-full h-full pointer-events-none z-0"
@@ -106,19 +106,19 @@ const EcosystemOrbitSection = ({ activeTab, setActiveTab }) => {
                 <div
                     ref={centerRef}
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20
-                               w-32 h-32 md:w-40 md:h-40 rounded-full
+                               w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full
                                bg-white flex items-center justify-center
                                shadow-[0_0_60px_rgba(255,255,255,0.25)]"
                 >
-                    <span className="font-serif font-bold text-2xl md:text-3xl text-[#0A0A0A]">ILT</span>
+                    <span className="font-serif font-bold text-lg md:text-2xl lg:text-3xl text-[#0A0A0A]">ILT</span>
                 </div>
 
                 {/* Satellite nodes */}
                 {nodes.map((node) => (
                     <button
                         key={node.id}
-                        className={`orbit-node absolute z-10 px-4 md:px-6 py-2.5 rounded-full
-                                    border backdrop-blur-md font-sans text-sm font-medium
+                        className={`orbit-node absolute z-10 px-3 md:px-6 py-2 md:py-2.5 rounded-full
+                                    border backdrop-blur-md font-sans text-xs md:text-sm font-medium
                                     whitespace-nowrap transition-all duration-300 cursor-pointer
                                     ${activeTab === node.id
                                 ? 'bg-[#0080FFA3] border-[#0080FF] text-white shadow-[0_0_25px_rgba(0,128,255,0.4)]'
@@ -139,7 +139,7 @@ const EcosystemOrbitSection = ({ activeTab, setActiveTab }) => {
                         <button
                             key={tab}
                             onClick={() => setActiveTab(index)}
-                            className={`orbit-tab-btn shrink-0 px-6 md:px-8 py-4 font-sans text-xs font-bold tracking-[0.15em] uppercase
+                            className={`orbit-tab-btn shrink-0 px-4 md:px-8 py-3 md:py-4 font-sans text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase
                                         transition-all duration-300 border-b-2 cursor-pointer
                                         ${activeTab === index
                                     ? 'text-white border-white'
