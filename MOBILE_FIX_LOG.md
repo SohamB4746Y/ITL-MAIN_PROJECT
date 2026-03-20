@@ -1,1 +1,2 @@
 - [x] docs: start mobile responsiveness log
+- [x] docs: document root cause 1 - missing container padding
