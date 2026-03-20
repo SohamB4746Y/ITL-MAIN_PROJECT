@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const navItems = [
+    { label: 'About Institute', path: '/about-institute' },
+    { label: 'Ecosystem', path: '/ecosystem' },
+    { label: 'Courses', path: '/courses' },
+    { label: 'Blogs', path: '/blogs' },
+    { label: 'Contact', path: '/contact' },
+];
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -23,13 +31,13 @@ const Navbar = () => {
 
                 <div className="hidden lg:flex items-center">
                     <ul className="flex gap-10">
-                        {['About Institute', 'Ecosystem', 'Courses', 'Blogs', 'Contact'].map((item) => (
-                            <li key={item}>
+                        {navItems.map((item) => (
+                            <li key={item.label}>
                                 <Link
-                                    to={`/${item.toLowerCase().replace(' ', '-')}`}
+                                    to={item.path}
                                     className="font-sans text-sm text-white hover:text-white transition-colors duration-300 font-normal tracking-wide"
                                 >
-                                    {item}
+                                    {item.label}
                                 </Link>
                             </li>
                         ))}
@@ -45,17 +53,17 @@ const Navbar = () => {
                     <span className={`block w-full h-[2px] bg-white transition-all duration-300 ease-in-out ${isOpen ? 'rotate-[45deg] -translate-y-[9px]' : ''}`}></span>
                 </div>
                 <div
-                    className={`fixed inset-0 bg-bg-dark backdrop-blur-md z-[55] flex flex-col justify-center items-center gap-8 transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                    className={`fixed inset-0 bg-[#0A0A0A] backdrop-blur-md z-[55] flex flex-col justify-center items-center gap-8 transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
                 >
                     <ul className="flex flex-col items-center gap-8">
-                        {['About Institute', 'Ecosystem', 'Courses', 'Blogs', 'Contact'].map((item) => (
-                            <li key={item}>
+                        {navItems.map((item) => (
+                            <li key={item.label}>
                                 <Link
-                                    to={`/${item.toLowerCase().replace(' ', '-')}`}
+                                    to={item.path}
                                     className="font-sans text-2xl text-white hover:text-white transition-colors duration-300 font-light"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    {item}
+                                    {item.label}
                                 </Link>
                             </li>
                         ))}

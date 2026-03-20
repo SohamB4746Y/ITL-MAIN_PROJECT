@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="relative w-full bg-[#0A0A0A66] text-white pt-24 mt-20 pb-8 px-4 md:px-8 font-sans">
             <div className="max-w-7xl mx-auto flex flex-col">
-                <div className="absolute -top-[5%] left-0 w-full h-full flex justify-center items-start overflow-hidden">
+                <div className="absolute -top-[5%] left-0 w-full h-full flex justify-center items-start overflow-hidden opacity-60 md:opacity-100 scale-75 md:scale-100 origin-top">
                     <svg width="614" height="264" viewBox="0 0 614 264" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.20822 239.459H29.7612L84.4475 20.0789H59.8945L65.1027 0H163.315L158.107 20.0789H133.554L78.8673 239.459H103.42L98.2121 259.538H0L5.20822 239.459Z" fill="white" />
                         <path d="M142.087 264C133.406 264 126.71 261.645 121.998 256.935C117.286 252.225 114.93 246.524 114.93 239.831C114.93 237.104 115.302 233.882 116.046 230.163C118.03 222.479 121.874 216.406 127.578 211.944C133.53 207.234 140.723 204.879 149.155 204.879C157.835 204.879 164.532 207.358 169.244 212.315C173.956 217.025 176.312 222.727 176.312 229.42C176.312 232.146 175.94 235.369 175.196 239.087C173.212 246.772 169.244 252.845 163.292 257.307C157.587 261.769 150.519 264 142.087 264Z" fill="white" />
@@ -83,7 +83,7 @@ const Footer = () => {
                                 placeholder="Name@email.com"
                                 className="w-full bg-[#0D0D0D] border border-[#292929] rounded-sm px-4 py-3 text-white placeholder-[#FFFFFF3D] focus:outline-hidden text-sm italic"
                             />
-                            <button className="bg-[#006AFF] text-white font-bold px-6 py-3 rounded-sm transition-colors uppercase text-sm tracking-wider whitespace-nowrap">
+                            <button className="bg-[#006AFF] text-white font-bold px-6 py-3 rounded-sm transition-colors uppercase text-sm tracking-wider whitespace-nowrap shrink-0">
                                 Subscribe
                             </button>
                         </div>
