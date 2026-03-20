@@ -140,7 +140,7 @@ const LeadershipSection = () => {
                         </div>
                     ))}
                 </div>
-                <div className="impact-image w-full md:w-[35%] bg-[#F0F4F8] rounded-2xl overflow-hidden relative min-h-[500px] lg:min-h-auto">
+                <div className="impact-image w-full lg:w-[35%] bg-[#F0F4F8] rounded-2xl overflow-hidden relative min-h-[300px] md:min-h-[400px] lg:min-h-auto">
                     <img
                         src="/images/lucaweb2.webp"
                         alt="Luca Project Showcase"

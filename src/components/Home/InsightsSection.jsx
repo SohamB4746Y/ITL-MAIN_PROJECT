@@ -143,8 +143,8 @@ const InsightsSection = () => {
                         </div>
                     ))}
                 </div>
-                <div className="absolute bottom-0 left-0 w-full h-[400px] flex items-end justify-center pb-10 cursor-pointer">
-                    <button className="pointer-events-auto bg-[#006AFF] text-white z-10 font-sans py-4 px-6">
+                <div className="flex items-center justify-center mt-8 pt-4">
+                    <button className="bg-[#006AFF] text-white z-10 font-sans py-4 px-6">
                         Explore All
                     </button>
                 </div>
