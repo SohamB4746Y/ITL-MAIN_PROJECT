@@ -3,3 +3,4 @@
 - [x] docs: log index.css responsive container rules
 - [x] docs: log Home Hero flex-col implementation
 - [x] docs: log Home Hero left-alignment fix
+- [x] docs: log Home Orbit diagram scaling constraint
