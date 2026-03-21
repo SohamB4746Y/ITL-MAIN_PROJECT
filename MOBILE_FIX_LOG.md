@@ -5,3 +5,4 @@
 - [x] docs: log Home Hero left-alignment fix
 - [x] docs: log Home Orbit diagram scaling constraint
 - [x] docs: document GSAP pinning issue on mobile devices
+- [x] docs: log InfoSlider cell padding override
