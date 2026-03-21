@@ -1,3 +1,4 @@
 - [x] docs: start mobile responsiveness log
 - [x] docs: document root cause 1 - missing container padding
 - [x] docs: log index.css responsive container rules
+- [x] docs: log Home Hero flex-col implementation
