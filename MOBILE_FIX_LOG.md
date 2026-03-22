@@ -10,3 +10,4 @@
 - [x] docs: log SolutionSection transition from grid to stacked cards
 - [x] docs: log SolutionSection animation disabling below 1024px
 - [x] docs: log MethodologySection replacement of bars with cards
+- [x] docs: log VisionSection vertical accordion architecture
