@@ -7,3 +7,4 @@
 - [x] docs: document GSAP pinning issue on mobile devices
 - [x] docs: log InfoSlider cell padding override
 - [x] docs: log InfoSlider mobile dot indicator implementation
+- [x] docs: log SolutionSection transition from grid to stacked cards
