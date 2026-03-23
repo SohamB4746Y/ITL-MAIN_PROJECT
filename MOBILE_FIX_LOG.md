@@ -16,3 +16,4 @@
 - [x] docs: log About Hero grid-to-flex conversion
 - [x] docs: log VisionOriginSection GSAP scroll end value reduction
 - [x] docs: log FounderSection image max-w-xs implementation
+- [x] docs: log FounderSection CTA button wrap fix
