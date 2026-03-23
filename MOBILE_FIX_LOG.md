@@ -14,3 +14,4 @@
 - [x] docs: log LeadershipSection flex-col enforcement
 - [x] docs: log LeadershipSection image min-height reduction
 - [x] docs: log About Hero grid-to-flex conversion
+- [x] docs: log VisionOriginSection GSAP scroll end value reduction
