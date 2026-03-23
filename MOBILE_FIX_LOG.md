@@ -12,3 +12,4 @@
 - [x] docs: log MethodologySection replacement of bars with cards
 - [x] docs: log VisionSection vertical accordion architecture
 - [x] docs: log LeadershipSection flex-col enforcement
+- [x] docs: log LeadershipSection image min-height reduction
