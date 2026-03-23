@@ -17,3 +17,4 @@
 - [x] docs: log VisionOriginSection GSAP scroll end value reduction
 - [x] docs: log FounderSection image max-w-xs implementation
 - [x] docs: log FounderSection CTA button wrap fix
+- [x] docs: log JourneySection scroll container padding optimization
