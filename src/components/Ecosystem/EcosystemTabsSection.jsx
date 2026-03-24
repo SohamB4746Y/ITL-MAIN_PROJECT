@@ -66,6 +66,7 @@ const EcosystemTabsSection = ({ activeTab }) => {
     const tab = tabContent[activeTab];
 
     useGSAP(() => {
+        if (!containerRef.current) return;
         gsap.fromTo('.tabs-content-wrapper',
             { opacity: 0, y: 30 },
             {

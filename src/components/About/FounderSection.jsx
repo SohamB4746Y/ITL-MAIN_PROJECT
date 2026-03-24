@@ -10,6 +10,7 @@ const FounderSection = () => {
     const containerRef = useRef(null);
 
     useGSAP(() => {
+        if (!containerRef.current) return;
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,

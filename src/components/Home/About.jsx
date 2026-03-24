@@ -94,7 +94,7 @@ const AboutSection = ({ bgRef }) => {
         <section ref={containerRef} className="relative w-full h-screen flex flex-col items-center justify-center bg-transparent overflow-x-hidden">
             {/* svgsssssssssssssss don't change broo, this gonaaa spoill everyyythingggg */}
             <div className='absolute h-full w-full bottom-full left-0 z-[-1]'>
-                <svg width="full" height="1500" className="min-h-[190vh]" viewBox="0 0 1280 1607" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="100%" height="1500" className="min-h-[190vh]" viewBox="0 0 1280 1607" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_f_home_about)">
                         <path d="M467.322 658.503C274.221 569.998 50.8455 578.503 -6.17874 764.503C-46.8001 897 22.2139 1017.31 125.321 1061.5C422.846 1189 1094.82 1157.5 1317.82 936.5C1541.15 715.177 1549.82 339 1304.32 339C1167.32 339 1106.82 496.503 1019.82 578.503C854.929 733.92 611.321 724.503 467.322 658.503Z" fill="#0000FF" style={{ fill: "#0000FF;fill:color(display-p3 0.0000 0.0000 1.0000);fill-opacity:1" }} />
                     </g>
@@ -163,8 +163,8 @@ const AboutSection = ({ bgRef }) => {
                                 <path d="M208.434 151.622C208.85 149.459 211.945 149.459 212.361 151.622L223.777 210.937C223.861 211.377 224.092 211.777 224.431 212.071L270.092 251.614C271.756 253.055 270.209 255.736 268.128 255.015L211.052 235.244C210.628 235.097 210.167 235.097 209.743 235.244L152.667 255.015C150.586 255.736 149.038 253.055 150.703 251.614L196.364 212.071C196.703 211.777 196.934 211.377 197.018 210.937L208.434 151.622Z" fill="white" />
                             </g>
                             <defs>
-                                <filter id="filter0_dd_247_79" x="0" y="0" width="420" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <filter id="filter0_dd_247_79" x="0" y="0" width="420" height="420" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                                     <feOffset />
                                     <feGaussianBlur stdDeviation="75" />

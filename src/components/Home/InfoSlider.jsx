@@ -71,13 +71,13 @@ const InfoSlider = () => {
                         <path d="M1945.26 891H500C572.957 738.803 779.738 736.834 960.106 819.503C1104.11 885.503 1347.71 894.92 1512.61 739.503C1599.61 657.503 1660.11 500 1797.11 500C1975.15 500 2019.51 697.851 1945.26 891Z" fill="#008000" />
                     </g>
                     <defs>
-                        <filter id="filter0_f_94_3118" x="340.439" y="280" width="1890.23" height="816.801" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <filter id="filter0_f_94_3118" x="340.439" y="280" width="1890.23" height="816.801" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                             <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_94_3118" />
                         </filter>
-                        <filter id="filter1_f_94_3118" x="0" y="0" width="2479.67" height="1391" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <filter id="filter1_f_94_3118" x="0" y="0" width="2479.67" height="1391" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                             <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_94_3118" />
                         </filter>
@@ -184,7 +184,7 @@ const InfoSlider = () => {
                     <span className={`transition-colors duration-300 ${activeSlide >= 2 ? "text-white font-bold" : ""}`}>03</span>
                 </div>
             </div>
-            <style jsx>{`
+            <style>{`
                 @keyframes fadeInKey {
                     from { opacity: 0; transform: translateY(10px); }
                     to { opacity: 1; transform: translateY(0); }

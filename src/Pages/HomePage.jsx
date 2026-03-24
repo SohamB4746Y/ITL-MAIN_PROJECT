@@ -11,9 +11,6 @@ import InsightsSection from "../components/Home/InsightsSection";
 import JoinMovementSection from "../components/Home/JoinMovementSection";
 
 export default function HomePage() {
-    const bgRef = React.useRef(null);
-    const cursorRef = React.useRef(null);
-
     return (
         <>
             <div className="relative w-full h-full">
