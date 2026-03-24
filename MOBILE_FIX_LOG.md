@@ -21,3 +21,4 @@
 - [x] docs: log Ecosystem Hero alignment and spacing fixes
 - [x] docs: summarize visual testing results on 375px viewport
 - [x] docs: note production build verification (zero errors)
+- [x] docs: confirm SVG blob integrity post-layout shifts
