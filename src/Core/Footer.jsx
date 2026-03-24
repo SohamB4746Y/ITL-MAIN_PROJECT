@@ -14,7 +14,7 @@ const Footer = () => {
                         <path d="M420.18 239.459H444.733L499.419 20.0789H474.866L480.074 0H578.287L573.078 20.0789H548.525L494.211 237.972H564.894L577.914 186.287H614L595.771 259.538H414.972L420.18 239.459Z" fill="white" />
                     </svg>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 border-t border-x border-[#FFFFFF1A] transform-gpu backdrop-blur-3xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 border-t border-x border-[#FFFFFF1A] transform-gpu backdrop-blur-sm lg:backdrop-blur-3xl">
                     <a href="#" className="group flex items-center justify-between py-6 md:pr-8 border-b md:border-b-0 md:border-r border-[#FFFFFF1A] px-6">
                         <div className="flex items-center gap-4">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@ const Footer = () => {
                     </a>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 border-t border-x border-[#FFFFFF1A] mb-24 backdrop-blur-3xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 border-t border-x border-[#FFFFFF1A] mb-24 backdrop-blur-sm lg:backdrop-blur-3xl">
                     <div className="p-8 md:border-r border-[#FFFFFF1A]">
                         <h3 className="font-serif italic text-xl mb-6 text-white">Ecosystem</h3>
                         <ul className="space-y-2">
