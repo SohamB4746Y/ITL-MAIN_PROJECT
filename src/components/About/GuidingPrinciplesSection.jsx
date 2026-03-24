@@ -54,12 +54,12 @@ const GuidingPrinciplesSection = () => {
                         <filter id="filter0_f_601_9" x="-312" y="450" width="1904.89" height="1197.32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_601_9" />
+                            <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_601_9" />
                         </filter>
                         <filter id="filter1_f_601_9" x="-762" y="0" width="2804.89" height="2097.32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="325" result="effect1_foregroundBlur_601_9" />
+                            <feGaussianBlur stdDeviation="60" result="effect1_foregroundBlur_601_9" />
                         </filter>
                     </defs>
                 </svg>

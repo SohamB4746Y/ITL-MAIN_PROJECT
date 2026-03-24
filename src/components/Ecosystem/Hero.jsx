@@ -16,12 +16,12 @@ const Hero = () => {
                         <filter id="filter0_f_eco_hero" x="-218" y="139" width="1904.89" height="1197.32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur" />
+                            <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur" />
                         </filter>
                         <filter id="filter1_f_eco_hero" x="-518" y="-91" width="2404.89" height="1697.32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="225" result="effect1_foregroundBlur" />
+                            <feGaussianBlur stdDeviation="60" result="effect1_foregroundBlur" />
                         </filter>
                     </defs>
                 </svg>

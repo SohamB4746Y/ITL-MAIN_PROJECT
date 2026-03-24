@@ -105,12 +105,12 @@ const AboutSection = ({ bgRef }) => {
                         <filter id="filter0_f_home_about" x="-218" y="139" width="1904.89" height="1197.32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_home_about" />
+                            <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_home_about" />
                         </filter>
                         <filter id="filter1_f_home_about" x="-518" y="-91" width="2404.89" height="1697.32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="225" result="effect1_foregroundBlur_home_about" />
+                            <feGaussianBlur stdDeviation="60" result="effect1_foregroundBlur_home_about" />
                         </filter>
                     </defs>
                 </svg>
@@ -167,7 +167,7 @@ const AboutSection = ({ bgRef }) => {
                                     <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                                     <feOffset />
-                                    <feGaussianBlur stdDeviation="75" />
+                                    <feGaussianBlur stdDeviation="40" />
                                     <feComposite in2="hardAlpha" operator="out" />
                                     <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.64 0" />
                                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_247_79" />

@@ -74,12 +74,12 @@ const InfoSlider = () => {
                         <filter id="filter0_f_94_3118" x="340.439" y="280" width="1890.23" height="816.801" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_94_3118" />
+                            <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_94_3118" />
                         </filter>
                         <filter id="filter1_f_94_3118" x="0" y="0" width="2479.67" height="1391" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_94_3118" />
+                            <feGaussianBlur stdDeviation="60" result="effect1_foregroundBlur_94_3118" />
                         </filter>
                     </defs>
                 </svg>
