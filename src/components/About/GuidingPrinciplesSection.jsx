@@ -42,7 +42,7 @@ const GuidingPrinciplesSection = () => {
     return (
         <section ref={containerRef} className="relative w-full flex items-center justify-center py-12 md:py-24 overflow-hidden min-h-[500px]">
             {/* svgsssssssssssssss don't change broo, this gonaaa spoill everyyythingggg */}
-            <div className='absolute h-full w-full -top-10 left-0 z-[-1]'>
+            <div className='absolute h-full w-full -top-10 left-0 z-[-1] hidden md:block'>
                 <svg width="100%" height="2098" viewBox="0 0 1280 2098" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_f_601_9)">
                         <path d="M373.322 969.503C180.221 880.998 -43.1545 889.503 -100.179 1075.5C-140.8 1208 -71.7861 1328.31 31.3215 1372.5C328.846 1500 1000.82 1468.5 1223.82 1247.5C1447.15 1026.18 1455.82 650 1210.32 650C1073.32 650 1012.82 807.503 925.822 889.503C760.929 1044.92 517.321 1035.5 373.322 969.503Z" fill="#800080" />

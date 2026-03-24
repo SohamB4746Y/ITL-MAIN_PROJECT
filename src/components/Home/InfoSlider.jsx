@@ -62,7 +62,7 @@ const InfoSlider = () => {
             `}
         >
             {/* svgsssssssssssssss don't change broo, this gonaaa spoill everyyythingggg */}
-            <div className='absolute h-full w-full bottom-0 left-0'>
+            <div className='absolute h-full w-full bottom-0 left-0 hidden md:block'>
                 <svg width="2480" height="1391" viewBox="0 0 2480 1391" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_f_94_3118)">
                         <path d="M1987.76 891.892L540.439 896.801C601.697 719.258 821.063 712.399 1011.11 799.503C1155.11 865.503 1398.71 874.92 1563.61 719.503C1650.61 637.503 1711.11 480 1848.11 480C2032.58 480 2073.54 692.395 1987.76 891.892Z" fill="#1A0099" />

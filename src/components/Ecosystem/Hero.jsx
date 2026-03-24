@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <section className="relative w-full min-h-screen flex flex-col pt-32">
             {/* Ambient blob background — DO NOT CHANGE */}
-            <div className='absolute h-full w-full bottom-full left-0 z-[-1]'>
+            <div className='absolute h-full w-full bottom-full left-0 z-[-1] hidden md:block'>
                 <svg width="100%" height="1500" className="min-h-[190vh]" viewBox="0 0 1280 1607" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_f_eco_hero)">
                         <path d="M467.322 658.503C274.221 569.998 50.8455 578.503 -6.17874 764.503C-46.8001 897 22.2139 1017.31 125.321 1061.5C422.846 1189 1094.82 1157.5 1317.82 936.5C1541.15 715.177 1549.82 339 1304.32 339C1167.32 339 1106.82 496.503 1019.82 578.503C854.929 733.92 611.321 724.503 467.322 658.503Z" fill="#0000FF" />
