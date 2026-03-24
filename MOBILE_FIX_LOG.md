@@ -18,3 +18,4 @@
 - [x] docs: log FounderSection image max-w-xs implementation
 - [x] docs: log FounderSection CTA button wrap fix
 - [x] docs: log JourneySection scroll container padding optimization
+- [x] docs: log Ecosystem Hero alignment and spacing fixes
