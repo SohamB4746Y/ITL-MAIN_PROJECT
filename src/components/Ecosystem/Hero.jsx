@@ -26,7 +26,7 @@ const Hero = () => {
                     </defs>
                 </svg>
             </div>
-            <div className="container mx-auto flex flex-col flex-grow relative z-10 w-full">
+            <div className="container mx-auto flex flex-col flex-grow relative z-10 w-full px-4 md:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 w-full flex-grow py-10">
                     <div className="flex flex-col justify-start">
                         <span className="flex items-center gap-3 font-sans text-xs font-semibold tracking-[0.2em] uppercase text-white/90">
@@ -39,12 +39,12 @@ const Hero = () => {
                         </h1>
                     </div>
                     <div className="flex flex-col justify-start lg:justify-end pb-8 lg:pb-32">
-                        <p className="font-sans text-base leading-relaxed text-white max-w-md text-left lg:text-right ml-auto">
+                        <p className="font-sans text-base leading-relaxed text-white max-w-md text-left lg:text-right lg:ml-auto">
                             The Institute of Trusted Leadership operates through an integrated ecosystem of specialized divisions, each addressing different aspects of leadership development and organizational transformation.
                         </p>
                     </div>
                 </div>
-                <div className="absolute bottom-6 md:bottom-10 left-0 w-full border-t-[0.5px] border-[#FFFFFF3D] pt-5 flex justify-between items-center text-white font-serif text-sm">
+                <div className="absolute bottom-6 md:bottom-10 left-0 w-full px-4 md:px-8 border-t-[0.5px] border-[#FFFFFF3D] pt-5 flex justify-between items-center text-white font-serif text-sm">
                     <span className="tracking-wide">Scroll to Discover</span>
                     <span>
                         <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">

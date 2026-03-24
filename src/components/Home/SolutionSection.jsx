@@ -36,6 +36,7 @@ const SolutionSection = () => {
     ];
 
     useGSAP(() => {
+        if (!containerRef.current) return;
         const isMobile = window.innerWidth < 1024;
 
         if (isMobile) {

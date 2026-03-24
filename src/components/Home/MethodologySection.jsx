@@ -9,6 +9,7 @@ const MethodologySection = () => {
     const containerRef = React.useRef(null);
 
     useGSAP(() => {
+        if (!containerRef.current) return;
         const isMobile = window.innerWidth < 1024;
 
         const tl = gsap.timeline({

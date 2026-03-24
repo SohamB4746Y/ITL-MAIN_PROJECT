@@ -51,9 +51,8 @@ html.lenis body {
     animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Prevent horizontal overflow globally */
-html,
-body {
+/* Prevent horizontal overflow — on #root to avoid conflicting with Lenis */
+#root {
     overflow-x: hidden;
     max-width: 100vw;
 }
