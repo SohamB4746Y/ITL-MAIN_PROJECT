@@ -124,7 +124,6 @@ const AboutSection = ({ bgRef }) => {
                                 cy="50"
                                 r="49"
                                 fill="#FFFFFF14"
-                                backdrop-filter="blur(50px)"
                                 stroke="#FFFFFF85"
                                 strokeWidth="0.3"
                                 strokeDasharray="2 2"
